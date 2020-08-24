@@ -1,0 +1,50 @@
+﻿@model MVC_CRUD_CodeFirstRegEstudiantes.Model.Models.Estudiante
+
+@{
+    ViewBag.Title = "Detalles Estudiante";
+}
+
+<h2>Detalles de Estudiante</h2>
+
+<div>
+    @*<h4>Estudiante</h4>*@
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombres)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombres)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Apellidos)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Apellidos)
+        </dd>
+
+        <dt>
+            @*@Html.DisplayNameFor(model => model.Fecha_Inscripcion)*@
+            Fecha de Inscripción
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fecha_Inscripcion)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    <a href="/Estudiantes/Edit?id=@Model.EstudianteID" id="@Model.EstudianteID" style="margin-bottom:10px" class="btn btn-success">
+        Modificar
+    </a>
+    <a class="btn btn-success" style="margin-bottom:10px" href="/Estudiantes/Index">
+        Retornar
+    </a>
+
+    @*@Html.ActionLink(" Modificar ", "Edit", new { id = Model.EstudianteID }) |
+    @Html.ActionLink("Volver Atrás", "Index")*@
+</p>
